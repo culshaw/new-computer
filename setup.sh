@@ -297,7 +297,7 @@ then
 	mas install 485812721  # Tweetdeck
 	mas install 668208984  # GIPHY Capture. The GIF Maker (For recording my screen as gif)
 	mas install 1351639930 # Gifski, convert videos to gifs
-	mas install 497799835  # Xcode
+	#mas install 497799835  # Xcode
 else
 	cecho "App Store login not complete. Skipping installing App Store Apps" $red
 fi
