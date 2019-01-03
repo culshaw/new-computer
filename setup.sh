@@ -179,6 +179,8 @@ brew install ispell
 
 ### Development
 brew cask install docker
+brew cask install tower # Tower git app
+brew cask install tableplus # PG data explorer
 
 
 ### Command line tools - install new ones, update others to latest version
@@ -216,6 +218,7 @@ brew cask install screenflow
 
 ### Productivity
 brew cask install wavebox
+brew cask install 1password
 brew cask install google-chrome
 brew cask install alfred
 brew cask install dropbox
@@ -230,7 +233,6 @@ brew cask install flux
 
 
 ### Keyboard & Mouse
-brew cask install karabiner-elements  # remap keys, emacs shortcuts
 brew cask install scroll-reverser  # allow natural scroll for trackpad, not for mouse
 
 
@@ -251,6 +253,9 @@ brew cask install zoomus
 brew cask install spotify
 brew cask install spotify-notifications
 brew cask install vlc
+brew cask install whatsapp
+
+brew cask install postman
 
 
 ### Run Brew Cleanup
