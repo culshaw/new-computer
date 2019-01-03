@@ -245,13 +245,11 @@ brew cask install quicklook-csv  # preview csvs
 
 ### Chat / Video Conference
 brew cask install slack
-brew cask install microsoft-teams
 brew cask install zoomus
-brew cask install signal
-
 
 ### Music and Video
-brew cask install marshallofsound-google-play-music-player
+brew cask install spotify
+brew cask install spotify-notifications
 brew cask install vlc
 
 
