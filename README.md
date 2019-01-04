@@ -202,8 +202,8 @@ brew install ispell
 
 ### Development
 brew cask install docker
-brew install postgresql
-brew install redis
+brew cask install tower # Tower git app
+brew cask install tableplus # PG data explorer
 
 
 ### Command line tools - install new ones, update others to latest version
@@ -216,29 +216,15 @@ brew install tree
 brew link curl --force
 brew install grep --with-default-names
 brew install trash  # move to osx trash instead of rm
-brew install less
 
 
 ### Python
 brew install python
-brew install pyenv
-
-
-### Microcontrollers & Electronics
-brew install avrdude
-brew cask install arduino
-# Manually install teensyduino from:
-# https://www.pjrc.com/teensy/td_download.html
+brew install pipenv
 
 
 ### Dev Editors 
 brew cask install visual-studio-code
-brew cask install pycharm
-### spacemacs github.com/syl20bnr/spacemacs
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-brew tap d12frosted/emacs-plus
-brew install emacs-plus --HEAD --with-natural-title-bars
-brew linkapps emacs-plus
 
 
 ### Writing
@@ -255,6 +241,7 @@ brew cask install screenflow
 
 ### Productivity
 brew cask install wavebox
+brew cask install 1password
 brew cask install google-chrome
 brew cask install alfred
 brew cask install dropbox
@@ -269,7 +256,6 @@ brew cask install flux
 
 
 ### Keyboard & Mouse
-brew cask install karabiner-elements  # remap keys, emacs shortcuts
 brew cask install scroll-reverser  # allow natural scroll for trackpad, not for mouse
 
 
@@ -284,19 +270,19 @@ brew cask install quicklook-csv  # preview csvs
 
 ### Chat / Video Conference
 brew cask install slack
-brew cask install microsoft-teams
 brew cask install zoomus
-brew cask install signal
-
 
 ### Music and Video
-brew cask install marshallofsound-google-play-music-player
+brew cask install spotify
+brew cask install spotify-notifications
 brew cask install vlc
+brew cask install whatsapp
+
+brew cask install postman
 
 
 ### Run Brew Cleanup
 brew cleanup
-
 
 #############################################
 ### Fonts
@@ -337,7 +323,7 @@ then
 	mas install 485812721  # Tweetdeck
 	mas install 668208984  # GIPHY Capture. The GIF Maker (For recording my screen as gif)
 	mas install 1351639930 # Gifski, convert videos to gifs
-	mas install 414030210  # Limechat, IRC app.
+	#mas install 497799835  # Xcode
 else
 	cecho "App Store login not complete. Skipping installing App Store Apps" $red
 fi
@@ -538,6 +524,20 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 # Disable the all too sensitive backswipe on trackpads
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+
+#############################################
+### JS and Development environment work
+#############################################
+
+echo "Installing Node... (requires command line tools)"
+
+xcode-select --install
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+nvm install 9.11
+nvm alias default 9.11
+nvm use 9.11
+
+brew install yarn --without-node
 
 
 #############################################
