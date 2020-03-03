@@ -148,7 +148,7 @@ brew cask install keycastr  # show key presses on screen (for gifs & screencasts
 brew cask install betterzip
 brew cask install caffeine  # keep computer from sleeping
 brew cask install skitch  # app to annotate screenshots
-brew cask install muzzle
+brew cask install muzzle # mute notifications
 brew cask install flux
 
 
