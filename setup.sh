@@ -176,6 +176,10 @@ brew cask install whatsapp
 
 brew cask install postman
 
+### Heroku
+brew tap heroku/brew
+brew install heroku
+
 
 ### Run Brew Cleanup
 brew cleanup
