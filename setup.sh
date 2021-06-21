@@ -107,7 +107,6 @@ brew cask install tableplus # PG data explorer
 brew install git  # upgrade to latest
 brew install git-lfs # track large files in git https://github.com/git-lfs/git-lfs
 brew install wget
-brew install zsh # zshell
 brew install tmux
 brew install tree
 brew link curl --force
@@ -125,8 +124,6 @@ brew cask install visual-studio-code
 
 
 ### Writing
-# brew cask install evernote
-brew cask install macdown
 brew cask install notion
 
 
@@ -137,7 +134,6 @@ brew cask install screenflow
 
 
 ### Productivity
-brew cask install wavebox
 brew cask install 1password
 brew cask install google-chrome
 brew cask install alfred
@@ -270,8 +266,8 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Remove the auto-hiding Dock delay
 defaults write com.apple.dock autohide-delay -float 0
 
-# Automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool true
+# Never hide the Dock
+defaults write com.apple.dock autohide -bool false
 
 # Only Show Open Applications In The Dock  
 defaults write com.apple.dock static-only -bool true
@@ -342,7 +338,8 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots to the desktop
-defaults write com.apple.screencapture location -string "$HOME/Desktop"
+mkdir $HOME/Desktop/Screenshots
+defaults write com.apple.screencapture location -string "$HOME/Desktop/Screenshots"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
@@ -376,14 +373,14 @@ killall mds
 
 # Disable “natural” (Lion-style) scrolling
 # Uncomment if you don't use scroll reverser
-# defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 # Stop iTunes from responding to the keyboard media keys
-#launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
 # Trackpad: enable tap to click for this user and for the login screen
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+#defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Disable force click and haptic feedback
 defaults write ~/Library/Preferences/com.apple.AppleMultitouchTrackpad.plist ForceSuppressed -bool true
@@ -430,10 +427,10 @@ defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 echo "Installing Node... (requires command line tools)"
 
 xcode-select --install
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-nvm install 9.11
-nvm alias default 9.11
-nvm use 9.11
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+nvm install 14.7
+nvm alias default 14.7
+nvm use 14.7
 
 brew install yarn --without-node
 
