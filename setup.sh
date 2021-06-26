@@ -82,7 +82,7 @@ echo "Starting brew app install..."
 
 ### Window Management
 # Todo: Try Divvy and spectacles in the future
-brew cask install sizeup  # window manager
+brew install sizeup  # window manager
 
 # Start SizeUp at login
 defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true
@@ -92,15 +92,15 @@ defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
 
 
 ### Developer Tools
-brew cask install iterm2
-brew cask install dash
+brew install iterm2
+brew install dash
 # brew install ispell
 
 
 ### Development
-brew cask install docker
-brew cask install tower # Tower git app
-brew cask install tableplus # PG data explorer
+brew install docker
+brew install tower # Tower git app
+brew install tableplus # PG data explorer
 
 
 ### Command line tools - install new ones, update others to latest version
@@ -120,57 +120,57 @@ brew install pipenv
 
 
 ### Dev Editors 
-brew cask install visual-studio-code
+brew install visual-studio-code
 
 
 ### Writing
-brew cask install notion
+brew install notion
 
 
 ### Conferences, Blogging, Screencasts
-brew cask install deckset
-brew cask install ImageOptim  # for optimizing images
-brew cask install screenflow
+brew install deckset
+brew install ImageOptim  # for optimizing images
+brew install screenflow
 
 
 ### Productivity
-brew cask install 1password
-brew cask install google-chrome
-brew cask install alfred
-brew cask install dropbox
+brew install 1password
+brew install google-chrome
+brew install alfred
+brew install dropbox
 
-brew cask install timing  # time and project tracker
-brew cask install keycastr  # show key presses on screen (for gifs & screencasts)
-brew cask install betterzip
-brew cask install caffeine  # keep computer from sleeping
-brew cask install skitch  # app to annotate screenshots
-brew cask install muzzle # mute notifications
-brew cask install flux
+brew install timing  # time and project tracker
+brew install keycastr  # show key presses on screen (for gifs & screencasts)
+brew install betterzip
+brew install caffeine  # keep computer from sleeping
+brew install skitch  # app to annotate screenshots
+brew install muzzle # mute notifications
+brew install flux
 
 
 ### Keyboard & Mouse
-brew cask install scroll-reverser  # allow natural scroll for trackpad, not for mouse
+brew install scroll-reverser  # allow natural scroll for trackpad, not for mouse
 
 
 ### Quicklook plugins https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode # syntax highlighting in preview
-brew cask install qlstephen  # preview plaintext files without extension
-brew cask install qlmarkdown  # preview markdown files
-brew cask install quicklook-json  # preview json files
-brew cask install epubquicklook  # preview epubs, make nice icons
-brew cask install quicklook-csv  # preview csvs
+brew install qlcolorcode # syntax highlighting in preview
+brew install qlstephen  # preview plaintext files without extension
+brew install qlmarkdown  # preview markdown files
+brew install quicklook-json  # preview json files
+brew install epubquicklook  # preview epubs, make nice icons
+brew install quicklook-csv  # preview csvs
 
 
 ### Chat / Video Conference
-# brew cask install slack
-brew cask install zoomus
+# brew install slack
+brew install zoomus
 
 ### Music and Video
-brew cask install spotify
-brew cask install vlc
-brew cask install whatsapp
+brew install spotify
+brew install vlc
+brew install whatsapp
 
-brew cask install postman
+brew install postman
 
 ### Heroku
 brew tap heroku/brew
@@ -189,8 +189,8 @@ echo "Installing fonts..."
 brew tap homebrew/cask-fonts
 
 ### programming fonts
-brew cask install font-fira-mono-for-powerline
-brew cask install font-fira-code
+brew install font-fira-mono-for-powerline
+brew install font-fira-code
 
 ### SourceCodePro + Powerline + Awesome Regular (for powerlevel 9k terminal icons)
 cd ~/Library/Fonts && { curl -O 'https://github.com/Falkor/dotfiles/blob/master/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf?raw=true' ; cd -; }
